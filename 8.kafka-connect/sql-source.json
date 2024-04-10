@@ -1,0 +1,13 @@
+{
+    "name": "person_source_mysql",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+        "connection.url": "jdbc:mysql://host.docker.internal:3306/db",
+        "connection.user": "root",
+        "connection.password": "password",
+        "topic.prefix": "person",
+        "poll.interval.ms": 1000,
+        "table.whitelist": "db.person",
+        "mode": "bulk"
+    }
+}
